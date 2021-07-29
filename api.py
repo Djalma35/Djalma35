@@ -252,28 +252,28 @@ Deseja realizar uma nova consulta ?
 def cnpj():
     banner()
 
-    cnpj_input = input('Digite o CNPJ para a consulta: ')
+    cpf_input = input('Digite o CPF para a consulta: ')
 
     request = requests.get(
-        'https://www.receitaws.com.br/v1/cnpj/{}'.format(cnpj_input))
+        'https://tudosobretodos.info/$cpf'.format(cpf_input))
 
-    cnpj_data = request.json()
+    cpf_data = request.json()
 
-    if 'message' not in cnpj_data:
+    if 'message' not in cpf_data:
         clear()
         banner()
-        print("==> CNPJ ENCONTRADO <==")
+        print("==> CPF ENCONTRADO <==")
 
-        print("CNPJ: {}".format(cnpj_data['cnpj']))
-        print("Nome: {}".format(cnpj_data['nome']))
-        print("CEP: {}".format(cnpj_data['cep']))
-        print("Telefone: {}".format(cnpj_data['telefone']))
-        print("E-mail: {}".format(cnpj_data['email']))
-        print("Situação: {}".format(cnpj_data['situacao']))
+        print("Sexo: {}".format(cpf_data['CPF']))
+        print("Nascimento: {}".format(cpf_data['nome']))
+        print("CPF: {}".format(cpf_data['cep']))
+        print("Telefone: {}".format(cpf_data['telefone']))
+        print("E-mail: {}".format(CPF_data['email']))
+        print("Endereço: {}".format(cpf_data['situacao']))
 
     else:
         clear()
-        print('{}: CNPJ inválido.'.format(cnpj_input))
+        print('{}: CPF inválido.'.format(cpf_input))
 
     print('---------------------------------')
     option = int(
