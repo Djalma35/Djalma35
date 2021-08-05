@@ -17,7 +17,7 @@ from banks import BANKS
 from bin import BIN
 from ddd import DDD
 
-tk = "TOKEN DO SEU BOT"
+tk = "1919141128:AAGzvz0KvlhzBvnETnvbC9FupHrSxGZftsc"
 
 bot = telebot.TeleBot(tk, parse_mode="markdown")
 
